@@ -61,7 +61,7 @@ Create a script file
     ./keys/
     ./roles/
     
-Description
+**Description**
     
     **bootstrap.yml** is an Ansible playbook that contains instructions about which roles are run on which hosts, and with which variables.
     
