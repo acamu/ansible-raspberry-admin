@@ -74,3 +74,17 @@ Description
     **keys** is a directory for SSH keys for passwordless access to the Raspberries.
 
    
+
+## 1 - Configuring hosts
+
+## 2 - Configuring ssh access
+
+## 3 - Running script
+
+## 4 - Test the devices modifications
+
+
+
+Sources:
+https://garthvh.com/blog/2017/02/11/Raspberry-Pi-Zero-Cluster-with-Ansible/
+http://www.hietala.org/automating-raspberry-pi-setup-with-ansible.html
