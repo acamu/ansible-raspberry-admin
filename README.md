@@ -20,31 +20,25 @@ DO some stuff
 
 
 ## A - Share SSH key between remote hosts
-First i set up a public/private keypair on the Raspberry pi controller so I don’t have to do any login stuff
+First step : Set up a public/private keypair on the Raspberry pi controller so I don’t have to do any login stuff
 
     // Generate the key
     ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
-    // Spit it Out
+    // show it
     cat ~/.ssh/id_rsa.pub
     
-Second copy the key freshly output and used SSH to connect to each Pi Zero from the raspberry pi controller
+Second step : Copy the key freshly output and use SSH to connect to each Pi from the raspberry pi Master
 
-    sudo ssh pi@P1, P2, P2, P4
-    sudo mkdir ~/.ssh
-    sudo nano ~/.ssh/authorized_keys
+    ssh-copy-id pi@P1
+    ssh-copy-id pi@P2
+    ssh-copy-id pi@P3
+    ssh-copy-id pi@P4
 
-Need to Paste Precedently key copied ... Not very efficient ...
-
-ssh-copy-id pi@P1
-ssh-copy-id pi@P2
-ssh-copy-id pi@P3
-ssh-copy-id pi@P4
-
-Not very efficient to...
+Not very efficient ...
 
 The best solution
 
-Create a file called servers. On server by line
+Create a file called 'servers'. One server by line.
 
     192.168.100.1
     server.example.com
@@ -53,6 +47,8 @@ Create a file called servers. On server by line
     
 Create a script file
 
+    #!/bin/bash
+    
     for i in `cat servers`;
     do
        ssh-copy-id -i ~/.ssh/id_rsa.pub pi@$i
