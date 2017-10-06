@@ -90,6 +90,17 @@ Create the hosts file and copy paste the data below
 
 ## 3 - Running script
 
+    ansible-playbook -i hosts bootstrap.yml --ask-pass
+    
+On the first run to a fresh Raspbian you will ask to enter a new password
+    
+    $ ansible-playbook -i hosts bootstrap.yml --ask-pass
+    SSH password:
+    Enter new password for user pi:
+
+    PLAY [all] *********************************************************************
+    ...
+
 ## 4 - Test the devices modifications
 
 
