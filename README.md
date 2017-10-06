@@ -4,7 +4,16 @@
 - xxxx
 
 **[Pre requisite]**
-- Ansible
+- Raspberry Pi(s) with Raspbian
+
+- Internet connectivity and IP address of the Raspberry Pi (get by scanner something like this : 
+	1.sudo nmap -sn 192.168.1.0/24)
+
+- •Ansible (Installation instructions)
+
+- •Clone of raspberry-ansible repository
+
+
 
 
 ## 0 - Prepare Raspberry pi HostName
