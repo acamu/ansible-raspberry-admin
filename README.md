@@ -16,7 +16,11 @@
 
 DO some stuff
 
-## 1  -Install Ansible on Master pi
+## 1 - Install Ansible on Master pi
+
+    sudo apt-get install python-pip git python-dev sshpass
+    sudo pip install markupsafe
+    sudo pip install ansible
 
 
 ## A - Share SSH key between remote hosts
@@ -38,7 +42,7 @@ Not very efficient ...
 
 The best solution
 
-Create a file called 'servers'. One server by line.
+Create a file called 'hosts'. One server by line.
 
     192.168.100.1
     server.example.com
@@ -49,7 +53,7 @@ Create a script file
 
     #!/bin/bash
     
-    for i in `cat servers`;
+    for i in `cat hosts`;
     do
        ssh-copy-id -i ~/.ssh/id_rsa.pub pi@$i
     done
@@ -63,11 +67,12 @@ Create a script file
     
 **Description**
     
-    **bootstrap.yml** is an Ansible playbook that contains instructions about which roles are run on which hosts, and with which variables.
-    
-    **hosts** has a list of hosts where the configurations are run into.
+- **bootstrap.yml** is an Ansible playbook that contains instructions about which roles are run on which hosts, and with which variables.
+ 
+-     **hosts** has a list of hosts where the configurations are run into.
 
-    **keys** is a directory for SSH keys for passwordless access to the Raspberries.
+-     **keys** is a directory for SSH keys for passwordless access to the Raspberries.
+
 
    
 
