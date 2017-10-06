@@ -69,9 +69,9 @@ Create a script file
     
 - **bootstrap.yml** is an Ansible playbook that contains instructions about which roles are run on which hosts, and with which variables.
  
--     **hosts** has a list of hosts where the configurations are run into.
+- **hosts** has a list of hosts where the configurations are run into.
 
--     **keys** is a directory for SSH keys for passwordless access to the Raspberries.
+- **keys** is a directory for SSH keys for passwordless access to the Raspberries.
 
 
    
