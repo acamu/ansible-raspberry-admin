@@ -28,4 +28,27 @@ Second copy the key freshly output and used SSH to connect to each Pi Zero from 
 
 Need to Paste Precedently key copied ... Not very efficient ...
 
+ssh-copy-id pi@P1
+ssh-copy-id pi@P2
+ssh-copy-id pi@P3
+ssh-copy-id pi@P4
+
+Not very efficient to...
+
+The best solution
+
+Create a file called servers. On server by line
+
+    192.168.100.1
+    server.example.com
+    192.168.100.2
+    server2.example.com
+    
+Create a script file
+
+    for i in `cat servers`;
+    do
+       ssh-copy-id -i ~/.ssh/id_rsa.pub root@$i
+    done
+
 ## B - 
