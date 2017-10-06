@@ -48,7 +48,7 @@ Create a script file
 
     for i in `cat servers`;
     do
-       ssh-copy-id -i ~/.ssh/id_rsa.pub root@$i
+       ssh-copy-id -i ~/.ssh/id_rsa.pub pi@$i
     done
 
 ## B - 
