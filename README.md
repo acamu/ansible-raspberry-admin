@@ -9,16 +9,14 @@
 - Internet connectivity and IP address of the Raspberry Pi (get by scanner something like this : 
 	1.sudo nmap -sn 192.168.1.0/24)
 
-- •Ansible (Installation instructions)
-
-- •Clone of raspberry-ansible repository
-
-
+- Ansible (How to)
 
 
 ## 0 - Prepare Raspberry pi HostName
 
 DO some stuff
+
+## 1  -Install Ansible on Master pi
 
 
 ## A - Share SSH key between remote hosts
@@ -60,4 +58,18 @@ Create a script file
        ssh-copy-id -i ~/.ssh/id_rsa.pub pi@$i
     done
 
-## B - 
+## B - Project structure
+
+    ./bootstrap.yml
+    ./hosts
+    ./keys/
+    ./roles/
+    
+    
+    **bootstrap.yml** is an Ansible playbook that contains instructions about which roles are run on which hosts, and with which variables.
+    
+    **hosts** has a list of hosts where the configurations are run into.
+
+    **keys** is a directory for SSH keys for passwordless access to the Raspberries.
+
+   
