@@ -105,6 +105,7 @@ On the first run to a fresh Raspbian you will ask to enter a new password
 
 
 
-Sources:
-https://garthvh.com/blog/2017/02/11/Raspberry-Pi-Zero-Cluster-with-Ansible/
-http://www.hietala.org/automating-raspberry-pi-setup-with-ansible.html
+**Sources:** 
+
+    https://garthvh.com/blog/2017/02/11/Raspberry-Pi-Zero-Cluster-with-Ansible/
+    http://www.hietala.org/automating-raspberry-pi-setup-with-ansible.html
