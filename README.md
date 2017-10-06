@@ -42,7 +42,7 @@ Not very efficient ...
 
 The best solution
 
-Create a file called 'hosts'. One server by line.
+Create a file called 'servers'. One server by line.
 
     192.168.100.1
     server.example.com
@@ -53,7 +53,7 @@ Create a script file
 
     #!/bin/bash
     
-    for i in `cat hosts`;
+    for i in `cat servers`;
     do
        ssh-copy-id -i ~/.ssh/id_rsa.pub pi@$i
     done
@@ -77,6 +77,14 @@ Create a script file
    
 
 ## 1 - Configuring hosts
+
+Create the hosts file and copy paste the data below
+
+    [clusternodes]
+    raspberrypi[1:4]
+    [clusternodes:vars]
+    ansible_ssh_user=pi
+
 
 ## 2 - Configuring ssh access
 
